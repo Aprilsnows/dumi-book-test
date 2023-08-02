@@ -1,13 +1,11 @@
+import React, { useState, FC, memo, useMemo } from 'react';
 
-import React, { useState, FC, memo ,useMemo } from "react";
+import './index.less';
 
-import './index.less'
+import { SliderProps } from './interface';
 
-import { SliderProps } from './interface'
-
-const Slider :FC<SliderProps>  = memo((props : any) => {
-
-  let { min, max, value,onChange } = props
+const Slider: FC<SliderProps> = memo((props: any) => {
+  let { min, max, value, onChange } = props;
 
   const [sliderValue, setSliderValue] = useState(value);
 
@@ -19,22 +17,16 @@ const Slider :FC<SliderProps>  = memo((props : any) => {
 
   return (
     <div>
-      <input
-        type="range"
-        min={min}
-        max={max}
-        value={sliderValue}
-        onChange={handleSliderChange}
-      />
+      <input type="range" min={min} max={max} value={sliderValue} onChange={handleSliderChange} />
       <span>{sliderValue}</span>
     </div>
   );
 });
 
 Slider.defaultProps = {
-  min:0,
-  max:100,
-  value:50
-}
+  min: 0,
+  max: 100,
+  value: 50,
+};
 
-export default Slider; 
+export default Slider;

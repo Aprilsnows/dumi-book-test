@@ -3,19 +3,19 @@ export interface ModalProps {
   /**
    * @description 按钮主题
    * @default primary
-   * @default 
+   * @default
    */
   titles?: String;
   /**
    * @description 主体内容
-   * @default 
-   * 
+   * @default
+   *
    */
   message?: String;
   /**
    * @description 点击回调
-   * @default 
-   * 
+   * @default
+   *
    */
   onClose?: Function;
 }

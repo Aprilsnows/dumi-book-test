@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react';
 import './index.less';
 import { RateProps } from './interface';
 declare const Rate: FC<RateProps>;

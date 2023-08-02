@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import Slider from "../index";
+import Slider from '../index';
 
 export default function Sliders() {
-
   const [values, setValue] = useState(60);
 
   const handleSliderChange = (newValue: any) => {
@@ -12,12 +11,7 @@ export default function Sliders() {
 
   return (
     <div>
-      <Slider
-        min={0}
-        max={100}
-        value={values}
-        onChange={handleSliderChange}
-      />
+      <Slider min={0} max={100} value={values} onChange={handleSliderChange} />
     </div>
   );
-};
+}

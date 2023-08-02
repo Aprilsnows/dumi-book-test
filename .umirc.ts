@@ -6,6 +6,8 @@ import { defineConfig } from 'dumi';
 export default defineConfig({
   title: 'cime', // 网站标题名
   // 网站标题旁边图片
+  base: './',
+  publicPath: './',
   favicon:
     'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
   // 页面上展示的logo的图片

@@ -1,38 +1,40 @@
-import React, { useState, FC, memo ,useMemo } from "react";
+import React, { useState, FC, memo, useMemo } from 'react';
 
-import './Pagination.less'
+import './Pagination.less';
 
-import { PaginationProps,PaginationStyle } from './interface';
+import { PaginationProps, PaginationStyle } from './interface';
 
-const Pagination : FC<PaginationProps> = memo((props : any) => {
-
-
+const Pagination: FC<PaginationProps> = memo((props: any) => {
   const { currentPage, totalPages, onPageChange, maxVisiblePages } = props;
 
   const getPageRange = () => {
     if (totalPages < maxVisiblePages) {
       return Array.from({ length: totalPages }, (_, index) => index + 1);
     }
-  
+
     if (totalPages <= maxVisiblePages) {
       return Array.from({ length: totalPages }, (_, index) => index + 1);
     } else if (currentPage <= Math.ceil(maxVisiblePages / 2)) {
-      const pages : any= [...Array(maxVisiblePages)].map((_, index) => index + 1);
-      pages.push("...");
+      const pages: any = [...Array(maxVisiblePages)].map((_, index) => index + 1);
+      pages.push('...');
       pages.push(totalPages);
       return pages;
     } else if (currentPage >= totalPages - Math.floor(maxVisiblePages / 2)) {
-      const pages = [1, "..."];
+      const pages = [1, '...'];
       for (let i = totalPages - maxVisiblePages + 1; i <= totalPages; i++) {
         pages.push(i);
       }
       return pages;
     } else {
-      const pages = [1, "..."];
-      for (let i = currentPage - Math.floor(maxVisiblePages / 2); i <= currentPage + Math.floor(maxVisiblePages / 2); i++) {
+      const pages = [1, '...'];
+      for (
+        let i = currentPage - Math.floor(maxVisiblePages / 2);
+        i <= currentPage + Math.floor(maxVisiblePages / 2);
+        i++
+      ) {
         pages.push(i);
       }
-      pages.push("...");
+      pages.push('...');
       pages.push(totalPages);
       return pages;
     }
@@ -62,7 +64,7 @@ const Pagination : FC<PaginationProps> = memo((props : any) => {
         Previous
       </button>
 
-      {pageRange.map((page : any, index : any) => (
+      {pageRange.map((page: any, index: any) => (
         <button
           key={index}
           className={page === currentPage ? 'active' : ''}
@@ -77,13 +79,13 @@ const Pagination : FC<PaginationProps> = memo((props : any) => {
       </button>
     </div>
   );
-})
+});
 
-Pagination.defaultProps= {
-    totalPages:50,
-    maxVisiblePages:5,
-    currentPage:1,
-    onPageChange:()=>{}
-}
+Pagination.defaultProps = {
+  totalPages: 50,
+  maxVisiblePages: 5,
+  currentPage: 1,
+  onPageChange: () => {},
+};
 
 export default Pagination;
