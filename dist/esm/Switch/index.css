@@ -1,0 +1,24 @@
+.switch {
+  width: 60px;
+  height: 30px;
+  background-color: gray;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.switch.checked {
+  background-color: #43c85d;
+}
+.slider {
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s ease-in-out;
+}
+.switch.checked .slider {
+  transform: translateX(30px);
+}

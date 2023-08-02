@@ -1,0 +1,38 @@
+.modal {
+  width: 200px;
+  height: 100vh;
+  background-color: rgb(207, 207, 207);
+  display: none;
+  z-index: 999;
+  color: white;
+  font-weight: 900;
+}
+
+.right {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.top {
+  width: 100vw;
+  height: 200px;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.left {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.bottom {
+  width: 100vw;
+  height: 200px;
+  display: block;
+  position: fixed;
+  bottom:0;
+  left: 0;
+}

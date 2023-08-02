@@ -1,0 +1,55 @@
+.Modals .modal {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Modals .modal .modal-content {
+  width: 30%;
+  height: 15%;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+}
+.Modals .modal .modal-content .modal-header {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Modals .modal .modal-content .modal-header h3 {
+  margin-left: 5%;
+  font-weight: 600;
+}
+.Modals .modal .modal-content .modal-header button {
+  margin-right: 1%;
+}
+.Modals .modal .modal-content .modal-body {
+  width: 100%;
+  height: 40%;
+}
+.Modals .modal .modal-content .modal-body p {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+.Modals .modal .modal-content .modal-footer {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.Modals .modal .modal-content .modal-footer button {
+  width: 10%;
+  height: 80%;
+  background-color: dodgerblue;
+  margin-right: 5%;
+}
